@@ -1,0 +1,36 @@
+PASS: 3 allowlisted evidence excerpts; publication remains pending.
+✔ curated bundle is structurally valid (6.3003ms)
+✔ catalog: accepted local record (0.9851ms)
+✔ catalog: rejects missing source commit (0.8146ms)
+✔ catalog: rejects absent limitations (0.6882ms)
+✔ catalog: rejects unverified live relabel (0.6985ms)
+✔ catalog: rejects private path (0.6717ms)
+✔ catalog: rejects extra contact data (0.6374ms)
+✔ catalog: rejects sensitive synthetic token (0.7277ms)
+✔ postgres: accepted local record (0.7916ms)
+✔ postgres: rejects missing source commit (0.7498ms)
+✔ postgres: rejects absent limitations (0.6667ms)
+✔ postgres: rejects unverified live relabel (0.6044ms)
+✔ postgres: rejects private path (0.6432ms)
+✔ postgres: rejects extra contact data (0.5701ms)
+✔ postgres: rejects sensitive synthetic token (0.711ms)
+✔ policy: accepted local record (0.6081ms)
+✔ policy: rejects missing source commit (0.5632ms)
+✔ policy: rejects absent limitations (0.6178ms)
+✔ policy: rejects unverified live relabel (0.5081ms)
+✔ policy: rejects private path (0.5192ms)
+✔ policy: rejects extra contact data (0.7187ms)
+✔ policy: rejects sensitive synthetic token (0.884ms)
+✔ cannot publish an unmeasured numeric claim (0.8339ms)
+✔ cannot relabel memory tests as PostgreSQL (0.5936ms)
+✔ cannot hide dirty-working-tree provenance (0.5937ms)
+✔ cannot promote a failed UI check (0.7442ms)
+✔ cannot inflate a measured result after the pinned import (1.2272ms)
+ℹ tests 27
+ℹ suites 0
+ℹ pass 27
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 115.2082
