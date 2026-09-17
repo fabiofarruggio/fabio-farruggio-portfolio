@@ -1,0 +1,28 @@
+
+Running 23 tests using 1 worker
+
+  ok  1 tests\browser\site.spec.ts:12:29 › desktop: inicio accessible static page (1.0s)
+  ok  2 tests\browser\site.spec.ts:12:29 › desktop: caso/ accessible static page (667ms)
+  ok  3 tests\browser\site.spec.ts:12:29 › desktop: arquitectura/ accessible static page (1.2s)
+  ok  4 tests\browser\site.spec.ts:12:29 › desktop: agentes/ accessible static page (784ms)
+  ok  5 tests\browser\site.spec.ts:12:29 › desktop: demos/ accessible static page (673ms)
+  ok  6 tests\browser\site.spec.ts:12:29 › desktop: resultados/ accessible static page (883ms)
+  ok  7 tests\browser\site.spec.ts:12:29 › desktop: decisiones/ accessible static page (718ms)
+  ok  8 tests\browser\site.spec.ts:12:29 › desktop: repositorios/ accessible static page (664ms)
+  ok  9 tests\browser\site.spec.ts:12:29 › desktop: sobre/ accessible static page (641ms)
+  ok 10 tests\browser\site.spec.ts:12:29 › mobile: inicio accessible static page (989ms)
+  ok 11 tests\browser\site.spec.ts:12:29 › mobile: caso/ accessible static page (676ms)
+  ok 12 tests\browser\site.spec.ts:12:29 › mobile: arquitectura/ accessible static page (702ms)
+  ok 13 tests\browser\site.spec.ts:12:29 › mobile: agentes/ accessible static page (658ms)
+  ok 14 tests\browser\site.spec.ts:12:29 › mobile: demos/ accessible static page (606ms)
+  ok 15 tests\browser\site.spec.ts:12:29 › mobile: resultados/ accessible static page (1.6s)
+  ok 16 tests\browser\site.spec.ts:12:29 › mobile: decisiones/ accessible static page (2.4s)
+  ok 17 tests\browser\site.spec.ts:12:29 › mobile: repositorios/ accessible static page (1.6s)
+  ok 18 tests\browser\site.spec.ts:12:29 › mobile: sobre/ accessible static page (890ms)
+  ok 19 tests\browser\site.spec.ts:34:1 › keyboard skip link and native navigation disclosure work without JavaScript (690ms)
+  ok 20 tests\browser\site.spec.ts:43:1 › every rendered link stays in the project base and resolves, including evidence (1.8s)
+  ok 21 tests\browser\site.spec.ts:59:1 › seven repositories and ten roles remain explicit, without invented remote links (472ms)
+  ok 22 tests\browser\site.spec.ts:65:1 › all pages fit a narrow320px viewport (712ms)
+  ok 23 tests\browser\site.spec.ts:69:1 › content and native navigation work with JavaScript disabled (621ms)
+
+  23 passed (23.4s)
