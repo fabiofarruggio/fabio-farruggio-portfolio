@@ -1,0 +1,26 @@
+10:42:09 [types] Generated 64ms
+10:42:09 [build] output: "static"
+10:42:09 [build] mode: "static"
+10:42:09 [build] directory: F:\Programacion\qa-agent-platform\fabio-farruggio-portfolio\dist\
+10:42:09 [build] Collecting build info...
+10:42:09 [build] ✓ Completed in 89ms.
+10:42:09 [build] Building static entrypoints...
+10:42:09 [vite] ✓ built in 146ms
+10:42:09 [vite] ✓ built in 17ms
+10:42:09 [build] Rearranging server assets...
+
+ generating static routes 
+10:42:09   ├─ /caso/index.html (+13ms) 
+10:42:09   ├─ /arquitectura/index.html (+2ms) 
+10:42:09   ├─ /agentes/index.html (+2ms) 
+10:42:09   ├─ /demos/index.html (+2ms) 
+10:42:09   ├─ /resultados/index.html (+2ms) 
+10:42:09   ├─ /decisiones/index.html (+3ms) 
+10:42:09   ├─ /repositorios/index.html (+11ms) 
+10:42:09   ├─ /sobre/index.html (+2ms) 
+10:42:09   ├─ /index.html (+5ms) 
+10:42:09 ✓ Completed in 82ms.
+
+10:42:09 [build] ✓ Completed in 295ms.
+10:42:09 [build] 9 page(s) built in 389ms
+10:42:09 [build] Complete!

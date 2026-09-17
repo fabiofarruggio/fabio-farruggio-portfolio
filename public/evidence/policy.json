@@ -1,0 +1,72 @@
+{
+  "schemaVersion": 1,
+  "id": "policy",
+  "kind": "sanitized_selected_fields",
+  "source": {
+    "repository": "qa-agent-platform",
+    "archiveCommit": "b514e82d7c3c3cbfd613334691de069099b035ce",
+    "path": "docs/implementation/evidence/security-policy/results.json",
+    "sha256": "9e731e971888738e848391057e0782cbe834954ab33ac95f910684eca0dc3fc1"
+  },
+  "recordedAt": "2026-09-17T13:00:44.6815439Z",
+  "status": "passed_local_boundary_checks",
+  "mode": "offline_replay",
+  "executionKind": "local_deterministic_boundary_verification",
+  "checkBaseCommit": "1f50a57c58c8379bab466e07cf29f8af30a2d843",
+  "workingTreeDirty": true,
+  "ownedSourcesUnchanged": true,
+  "focusedTestsPassed": 121,
+  "providerCalls": 0,
+  "sourceHashes": [
+    {
+      "path": "packages/policy/src/intent-policy.ts",
+      "sha256": "138b8c654442950225e9f8e1234bf5eda365fb5d0595f0d95cde8e8cfdff5af5"
+    },
+    {
+      "path": "packages/policy/src/paths.ts",
+      "sha256": "0ce5ac0920d0abef1d95e1fb8ff90e8f741c8f450c5ac1827f06b18a77209691"
+    },
+    {
+      "path": "packages/policy/tests/intent-policy.test.ts",
+      "sha256": "bc3c0ed30923a8a403352292480365f3c6d4e72975cd29552876b5a6a2344b48"
+    },
+    {
+      "path": "packages/policy/tests/paths.test.ts",
+      "sha256": "6fe2825fe35c608a92058c4d37cc3db682b2e9cce28f5452372f9015ab4ab505"
+    },
+    {
+      "path": "packages/tools/publisher/schemas/file-edits.schema.json",
+      "sha256": "ca512636dee94cf6cebb8398ba793c2f640652284a5b6a2ee5fbbd1785e1cd92"
+    },
+    {
+      "path": "packages/tools/publisher/schemas/validation.schema.json",
+      "sha256": "12e96e673c45061d3c6e6fc3dcea6d7f03e5f968fc686bd242c18d1d8328e917"
+    },
+    {
+      "path": "packages/tools/publisher/src/index.ts",
+      "sha256": "6205ce30878344827f929aed2b885c15c2f6f9d8358c3922516855fa77472d58"
+    },
+    {
+      "path": "packages/tools/publisher/tests/publisher.test.ts",
+      "sha256": "f82e239e4e867eb3b9b77065de456592bfb0e86054c0af564e7e28f2ebba8477"
+    },
+    {
+      "path": "packages/tools/publisher/tests/support.ts",
+      "sha256": "4c0f980aff8ce1d915265e460e3e806300b824b2b74b00ccc1c592d20ad672b5"
+    },
+    {
+      "path": "scripts/copy-build-assets.mjs",
+      "sha256": "f53459ca3ace06470639f780547246bbd65601205df4fdfd0078a9a65c0ee58e"
+    }
+  ],
+  "limitations": [
+    "GitHub API or remote publication",
+    "real scoped credentials and OS/job separation",
+    "authenticated approval and validation ingress",
+    "actual generated-patch sandbox execution for these publisher fixtures",
+    "comprehensive secret/injection detection",
+    "remote compare-and-swap and redirect behavior",
+    "release/gate acceptance"
+  ],
+  "sourceBindingNote": "Owned source byte hashes captured before and after final focused+state verification and equal. This dirty-working-tree record is not a clean-commit release evidence receipt; root must reproduce committed integration."
+}

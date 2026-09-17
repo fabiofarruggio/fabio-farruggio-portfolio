@@ -1,0 +1,2 @@
+# Preserve exact captured diagnostics, including padding and final blank lines.
+*.txt -text whitespace=-blank-at-eol,-blank-at-eof,cr-at-eol

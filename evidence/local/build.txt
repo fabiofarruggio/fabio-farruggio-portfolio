@@ -1,0 +1,31 @@
+
+> fabio-farruggio-portfolio@0.1.0 build
+> node scripts/validate-content.mjs && astro build
+
+PASS: 3 allowlisted evidence excerpts; publication remains pending.
+10:39:10 [types] Generated 62ms
+10:39:10 [build] output: "static"
+10:39:10 [build] mode: "static"
+10:39:10 [build] directory: F:\Programacion\qa-agent-platform\fabio-farruggio-portfolio\dist\
+10:39:10 [build] Collecting build info...
+10:39:10 [build] ✓ Completed in 93ms.
+10:39:10 [build] Building static entrypoints...
+10:39:10 [vite] ✓ built in 169ms
+10:39:10 [vite] ✓ built in 18ms
+10:39:10 [build] Rearranging server assets...
+
+ generating static routes 
+10:39:10   ├─ /caso/index.html (+13ms) 
+10:39:10   ├─ /arquitectura/index.html (+2ms) 
+10:39:10   ├─ /agentes/index.html (+2ms) 
+10:39:10   ├─ /demos/index.html (+2ms) 
+10:39:10   ├─ /resultados/index.html (+2ms) 
+10:39:10   ├─ /decisiones/index.html (+2ms) 
+10:39:10   ├─ /repositorios/index.html (+12ms) 
+10:39:10   ├─ /sobre/index.html (+2ms) 
+10:39:10   ├─ /index.html (+4ms) 
+10:39:10 ✓ Completed in 82ms.
+
+10:39:10 [build] ✓ Completed in 314ms.
+10:39:10 [build] 9 page(s) built in 411ms
+10:39:10 [build] Complete!

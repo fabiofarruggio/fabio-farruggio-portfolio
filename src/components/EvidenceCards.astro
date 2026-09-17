@@ -1,0 +1,18 @@
+---
+import { href } from '../data/site';
+import catalog from '../../public/evidence/catalog.json';
+import postgres from '../../public/evidence/postgres.json';
+import policy from '../../public/evidence/policy.json';
+const cards = [
+  { id: 'catalog', number: `${catalog.testsPassed}`, unit: 'pruebas de Catálogo', title: 'Una suite, una revisión exacta.', text: 'Ejecución HTTP y Chrome con Store en memoria aislado. No acredita PostgreSQL ni un release completo.', source: catalog, revision: catalog.executedSourceCommit, label: 'SHA ejecutado' },
+  { id: 'postgres', number: `${postgres.checks.length}`, unit: 'checks de UI con PostgreSQL', title: 'Persistencia real, alcance acotado.', text: 'Navegador sobre el laboratorio local con PostgreSQL. No equivale a la suite completa ni a un sandbox de código generado.', source: postgres, revision: postgres.executedSourceCommit, label: 'SHA de la app ejecutada' },
+  { id: 'policy', number: `${policy.focusedTestsPassed}`, unit: 'pruebas de fronteras locales', title: 'El permiso se verifica antes.', text: 'Política y publicador con transporte de prueba. Run de working tree con hashes; no hubo PR ni credencial remota.', source: policy, revision: policy.checkBaseCommit, label: 'HEAD base; working tree modificado' },
+];
+---
+<div class="evidence-grid">{cards.map(card => <article class="evidence-card">
+  <div class="evidence-top"><span class="small-label">{card.source.mode}</span><span class="tag">REGISTRO LOCAL</span></div>
+  <p class="evidence-number">{card.number}<span>{card.unit}</span></p>
+  <h3>{card.title}</h3><p>{card.text}</p>
+  <dl class="evidence-meta"><dt>{card.label}</dt><dd><code>{card.revision}</code></dd><dt>Fecha del registro</dt><dd><time datetime={card.source.recordedAt}>{card.source.recordedAt.slice(0,10)}</time></dd></dl>
+  <a class="text-link" href={href(`evidence/${card.id}.json`)}>Leer extracto {card.id} <span aria-hidden="true">↗</span></a>
+</article>)}</div>

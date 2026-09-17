@@ -1,0 +1,85 @@
+{
+  "config": {
+    "argv": [
+      "F:\\Programacion\\qa-agent-platform\\.tools\\node-v24.21.0-win-x64\\node.exe",
+      "F:\\Programacion\\qa-agent-platform\\fabio-farruggio-portfolio\\node_modules\\@playwright\\test\\cli.js",
+      "test"
+    ],
+    "configFile": "F:\\Programacion\\qa-agent-platform\\fabio-farruggio-portfolio\\playwright.config.ts",
+    "rootDir": "F:/Programacion/qa-agent-platform/fabio-farruggio-portfolio/tests/browser",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {},
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "F:/Programacion/qa-agent-platform/fabio-farruggio-portfolio/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {},
+        "id": "",
+        "name": "",
+        "testDir": "F:/Programacion/qa-agent-platform/fabio-farruggio-portfolio/tests/browser",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "evidence/local/verified-2026-09-17T13-42-02.848Z/results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.63.0",
+    "workers": 1,
+    "webServer": {
+      "command": "npm run preview",
+      "url": "http://127.0.0.1:4321/fabio-farruggio-portfolio/",
+      "reuseExistingServer": false,
+      "timeout": 30000,
+      "env": {
+        "ASTRO_TELEMETRY_DISABLED": "1"
+      }
+    }
+  },
+  "suites": [],
+  "errors": [
+    {
+      "message": "Error: http://127.0.0.1:4321/fabio-farruggio-portfolio/ is already used, make sure that nothing is running on the port/url or set reuseExistingServer:true in config.webServer.",
+      "stack": "Error: http://127.0.0.1:4321/fabio-farruggio-portfolio/ is already used, make sure that nothing is running on the port/url or set reuseExistingServer:true in config.webServer."
+    }
+  ],
+  "stats": {
+    "startTime": "2026-09-17T13:42:09.926Z",
+    "duration": 20.90500000000003,
+    "expected": 0,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

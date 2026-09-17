@@ -1,0 +1,22 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Architecture from '../components/Architecture.astro';
+import EvidenceCards from '../components/EvidenceCards.astro';
+import { pages, agents, repositories, href } from '../data/site';
+import type { Page } from '../data/site';
+export function getStaticPaths() { return pages.map(page => ({ params: { page: page.slug }, props: { page } })); }
+interface Props { page: Page }
+const { page } = Astro.props;
+---
+<Layout title={page.title} description={page.intro} active={page.slug}>
+  <section class="page-header shell"><a class="back-link" href={href()}>← Inicio</a><p class="eyebrow">{page.eyebrow}</p><h1>{page.title}</h1><p class="page-intro">{page.intro}</p></section>
+  <div class="shell page-content">
+    {page.slug === 'arquitectura' && <div class="wide-diagram"><Architecture /></div>}
+    {page.slug === 'resultados' && <EvidenceCards />}
+    <div class="article-grid">{page.sections.map((section, index) => <section class="article-section"><span class="section-number">{String(index+1).padStart(2, '0')}</span><div><h2>{section.title}</h2><p>{section.text}</p>{section.items && <ul>{section.items.map(item => <li>{item}</li>)}</ul>}</div></section>)}</div>
+    {page.slug === 'agentes' && <section class="role-list" aria-label="Roles y límites de los diez agentes">{agents.map(([id, role, limit], index) => <article><span>{String(index+1).padStart(2,'0')}</span><div><h2>{role}</h2><code>{id}</code></div><p>{limit}</p></article>)}</section>}
+    {page.slug === 'repositorios' && <div class="repo-grid">{repositories.map(([name, purpose, status], index) => <article><span class="eyebrow">REPOSITORIO {String(index+1).padStart(2,'0')}</span><h2>{name}</h2><p>{purpose}</p><div class="repo-status">{status}</div><span class="small-label">Enlace remoto pendiente de autorización</span></article>)}</div>}
+    {page.slug === 'resultados' && <aside class="note"><h2>Comprobar el origen</h2><p>Cada JSON conserva repositorio, commit de archivo, ruta y SHA-256 del registro original. El commit que conserva la evidencia no debe confundirse con el SHA realmente ejecutado. En policy se conserva explícitamente la condición de working tree modificado.</p><p>Para reconstruir un registro desde el repositorio local: <code>git show &lt;archiveCommit&gt;:&lt;path&gt;</code>. Estos extractos no sustituyen una atestación del entorno ni la aceptación del proyecto.</p></aside>}
+    <aside class="next-step"><span class="eyebrow">SEGUIR EXPLORANDO</span><a href={href(page.slug === 'resultados' ? 'decisiones/' : 'resultados/')}>{page.slug === 'resultados' ? 'Las decisiones detrás del sistema' : 'Evidencia, modo y limitaciones'} <span aria-hidden="true">↗</span></a></aside>
+  </div>
+</Layout>

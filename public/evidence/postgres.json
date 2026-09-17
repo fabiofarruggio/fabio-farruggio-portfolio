@@ -1,0 +1,56 @@
+{
+  "schemaVersion": 1,
+  "id": "postgres",
+  "kind": "sanitized_selected_fields",
+  "source": {
+    "repository": "quality-lab-app",
+    "archiveCommit": "da073c798c0488d59cde8d1526af7ce0a9a2f0f1",
+    "path": "docs/evidence/compose-20260917/browser-2026-09-17T02-40-26.233Z/result.json",
+    "sha256": "e9f7ad13165f52a944e7ec4e89d39e5261ecfbe5fabd3b6c3514b0b884f04d58"
+  },
+  "recordedAt": "2026-09-17T02:40:27.963Z",
+  "status": "passed",
+  "mode": "offline_replay",
+  "executionKind": "deterministic_local",
+  "executedSourceCommit": "1584d30089c2d1fbc8472a3acbaa14925cf91cda",
+  "storeMode": "postgres",
+  "checks": [
+    {
+      "name": "real_postgres_readiness_and_exact_source",
+      "status": "passed"
+    },
+    {
+      "name": "postgres_environment_label_and_shopper_login",
+      "status": "passed"
+    },
+    {
+      "name": "integer_cent_boundary_quote_and_inactive_product",
+      "status": "passed"
+    },
+    {
+      "name": "ui_confirmation_and_safe_replay_against_postgres",
+      "status": "passed"
+    },
+    {
+      "name": "mobile_layout_no_horizontal_overflow",
+      "status": "passed"
+    },
+    {
+      "name": "persisted_order_visible_after_new_login",
+      "status": "passed"
+    },
+    {
+      "name": "order_admin_reads_persisted_order_without_checkout_controls",
+      "status": "passed"
+    },
+    {
+      "name": "browser_has_no_page_errors_or_external_destinations",
+      "status": "passed"
+    }
+  ],
+  "modelCalls": 0,
+  "limitations": [
+    "Bounded application UI smoke, not complete accessibility certification or the full consumer suite.",
+    "Browser routing restriction is not an OS-level generated-code sandbox."
+  ]
+}

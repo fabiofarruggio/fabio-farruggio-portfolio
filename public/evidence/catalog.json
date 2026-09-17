@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "id": "catalog",
+  "kind": "sanitized_selected_fields",
+  "source": {
+    "repository": "quality-lab-catalog-tests",
+    "archiveCommit": "14e9bddf63bccab45bc29b6003e6a380279a28b8",
+    "path": "evidence/2026-09-17T12-51-57.287Z/acceptance.json",
+    "sha256": "fc5e57bc5d1e8c0b2d46db08761709e509df1b937efb81610b5e10e783eb1e48"
+  },
+  "recordedAt": "2026-09-17T12:58:36.707Z",
+  "status": "passed_local_snapshot_admission",
+  "mode": "offline_replay",
+  "executionKind": "deterministic_local",
+  "executedSourceCommit": "a2f7ea68b07c1edace68239e462651fc9975db90",
+  "executedAppCommit": "7fd57a9230d079492760e58b400bad7320ff5d31",
+  "storeMode": "isolated_test_double",
+  "testsPassed": 25,
+  "testsSkipped": 0,
+  "testsUnexpected": 0,
+  "bindingTests": 30,
+  "databaseIntegrationVerified": false,
+  "limitations": [
+    "Each test uses a fresh real HTTP process with a memory Store test double, not PostgreSQL or Docker.",
+    "App build is produced from exact committed blobs in a catalog-owned staging directory; mutable sibling dist is not used.",
+    "Hashes prove byte consistency, not cryptographic attestation of a trusted execution environment.",
+    "No SaaS, LLM, sandbox, image provenance or remote CI acceptance."
+  ]
+}

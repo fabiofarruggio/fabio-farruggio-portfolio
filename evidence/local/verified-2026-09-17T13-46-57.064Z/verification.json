@@ -1,0 +1,476 @@
+{
+  "startedAt": "2026-09-17T13:46:57.070Z",
+  "mode": "offline_replay",
+  "executionKind": "real_local_static_site_browser_verification",
+  "milestoneAccepted": false,
+  "publicationExecuted": false,
+  "baselineHead": "dc785c3efca617df2ac6b494ddf756733f222a85",
+  "workingTreeDirty": true,
+  "node": "v24.21.0",
+  "nodeBinarySha256": "ba4e6d110e8c1592a1ecd390f6b05f3da124b13871a5be62b341a07a853c6c32",
+  "sourceBefore": [
+    {
+      "path": ".gitattributes",
+      "sha256": "5a317c601a1406cf661ce103face7baed2b793e2469cf29f3b7e8dd46eecbc3d"
+    },
+    {
+      "path": ".github/workflows/pages.yml",
+      "sha256": "afd8bec19b07452c4b3144266c0cb9e939d663c4954a51d22ff0bb24675beb0e"
+    },
+    {
+      "path": ".gitignore",
+      "sha256": "fecc582fd2d9fbc741955881c957f31e4c9a94a97d0c999be32fdb1d3d73d289"
+    },
+    {
+      "path": "astro.config.mjs",
+      "sha256": "98e7ce8d00b470a798ea4d2c4acb83d718745a4ef85c92635829177860d38353"
+    },
+    {
+      "path": "package-lock.json",
+      "sha256": "50b9f4d8f83555e4b3e71e08300ada72a96f80fb245a5916c4e806ca0815d2e9"
+    },
+    {
+      "path": "package.json",
+      "sha256": "cf16f86012cfa163effc789a67c48a31b948cfbca178b51bba33eeba94147d5d"
+    },
+    {
+      "path": "playwright.config.ts",
+      "sha256": "05eecf963a343fb642ccc7ab86d0e1f086927b7bbc52d8b566e8738597a02f1d"
+    },
+    {
+      "path": "public/evidence/catalog.json",
+      "sha256": "afc77853dd0207b73a1099e11a9b95a86674707a502319a66ace21d0f9b5fc52"
+    },
+    {
+      "path": "public/evidence/policy.json",
+      "sha256": "228dbd09b41e17ded268cf2e2de3ce037534bbe12fce603caf9135fae928ca65"
+    },
+    {
+      "path": "public/evidence/postgres.json",
+      "sha256": "a4a8a2fb18c93c0f86aa9e4cae51afd790f59819e2d0bf9b32553490b30ada1b"
+    },
+    {
+      "path": "public/favicon.svg",
+      "sha256": "1d6b6e367634e3641dad6aa97769b875a4c44cff0711043edc282236384f1d3b"
+    },
+    {
+      "path": "scripts/import-evidence.mjs",
+      "sha256": "8b83f03e15f9145d9cc4e85d87e6f77a4d0e89b20e88fd50f975b65b5e9c0e6b"
+    },
+    {
+      "path": "scripts/serve-static.mjs",
+      "sha256": "522c7ba1a8a5db3ac9f04bb83a9fce04f14c4426cf175b9876a070da52c5dd73"
+    },
+    {
+      "path": "scripts/validate-content.mjs",
+      "sha256": "ee2f77686291a0fe35b50a126be9b009216877ec7ce573c154c4ec0bf202f693"
+    },
+    {
+      "path": "scripts/verify-local.mjs",
+      "sha256": "d80d6b44476fb3e9891ac972e1847fda356d4986836affe06810e42280ccf3b1"
+    },
+    {
+      "path": "src/components/Architecture.astro",
+      "sha256": "20475a6d1c83025827e355d774f711b8f0cb8dc590981d1641264df2b5f89222"
+    },
+    {
+      "path": "src/components/EvidenceCards.astro",
+      "sha256": "92c9e536d1a00bf3a5c0672ea209bd9d926f71b8a39bd1b80b284bfd099d1bee"
+    },
+    {
+      "path": "src/data/evidence-lock.json",
+      "sha256": "557ee9f59c46f72ccd9cbf0ad98d36544e814fbfdcb3a82caa77190a58100b2b"
+    },
+    {
+      "path": "src/data/site.ts",
+      "sha256": "c6b83b3dbba6ba575d7ba904c60b726f6c84d0de9a8c37bf0ef27897b37717db"
+    },
+    {
+      "path": "src/layouts/Layout.astro",
+      "sha256": "71a9761e6c4f9621e4d65a3c8103d437577f6c8bc4f64a18b93fc6a62a3f4ec4"
+    },
+    {
+      "path": "src/pages/[page].astro",
+      "sha256": "5e8bee19dc651c7f078c41d2be5858e930cee18c05c79927b21da35a9f905a31"
+    },
+    {
+      "path": "src/pages/index.astro",
+      "sha256": "4db02013a9a5d04a0cb492de68c29eac505afbe88182c3b9e30fa330f6c716ad"
+    },
+    {
+      "path": "src/styles/global.css",
+      "sha256": "9307bdb29888b0983d6ca8a47c8f26b402309d9904cafe48cd4926d479d0692c"
+    },
+    {
+      "path": "tests/browser/site.spec.ts",
+      "sha256": "f56660a7f46d10b16f5890e127aa95041858007d1363284bcd19a71b7c894565"
+    },
+    {
+      "path": "tests/content.test.mjs",
+      "sha256": "00e1be913d72ca0d8379da9165b9a04786b40459a21097181815fa17a138a843"
+    },
+    {
+      "path": "tsconfig.json",
+      "sha256": "b323e0539ced004a6d310d9a49f4e7675853b5dea22715d6ec686321e37dfc4a"
+    }
+  ],
+  "commands": [
+    {
+      "name": "astro-check",
+      "executable": "node",
+      "args": [
+        "node_modules/astro/bin/astro.mjs",
+        "check"
+      ],
+      "exitCode": 0,
+      "error": null
+    },
+    {
+      "name": "content-tests",
+      "executable": "node",
+      "args": [
+        "--test",
+        "tests/content.test.mjs"
+      ],
+      "exitCode": 0,
+      "error": null
+    },
+    {
+      "name": "content-validation",
+      "executable": "node",
+      "args": [
+        "scripts/validate-content.mjs"
+      ],
+      "exitCode": 0,
+      "error": null
+    },
+    {
+      "name": "build",
+      "executable": "node",
+      "args": [
+        "node_modules/astro/bin/astro.mjs",
+        "build"
+      ],
+      "exitCode": 0,
+      "error": null
+    },
+    {
+      "name": "browser",
+      "executable": "node",
+      "args": [
+        "node_modules/@playwright/test/cli.js",
+        "test"
+      ],
+      "exitCode": 0,
+      "error": null
+    }
+  ],
+  "limitations": [
+    "Local Chrome and selected axe rules do not certify complete accessibility.",
+    "No remote GitHub Pages deployment, public URL, SaaS or model inference.",
+    "Evidence excerpts retain their historical modes and original source identities."
+  ],
+  "distBefore": [
+    {
+      "path": "dist/_astro/EvidenceCards.BtlGKulV.css",
+      "sha256": "18231656d12f3a5921e34da0e1d85de16e77bc6d73543f9262620fbe47bea57a"
+    },
+    {
+      "path": "dist/agentes/index.html",
+      "sha256": "e46690f2cb1a84749fa2ee7e979026f426eb471580d1b2996cc6cbddc2a1ecdf"
+    },
+    {
+      "path": "dist/arquitectura/index.html",
+      "sha256": "e0f4a24f79998711e30cd23a0d944022a25036ba94c8d8b63896760ec2249000"
+    },
+    {
+      "path": "dist/caso/index.html",
+      "sha256": "ea6d9fcd829cc8a98505f44b621823a64e8c2c4b0119cd4c0b78c2a603216247"
+    },
+    {
+      "path": "dist/decisiones/index.html",
+      "sha256": "acf77c498103b4aa974f65221df16f349197ba71d6206e83b67ac81a56c1a3b6"
+    },
+    {
+      "path": "dist/demos/index.html",
+      "sha256": "7fc9896f9c7b168564b0f8ba6bd03cde8fcae1d4be8890959e7416810e1e92ad"
+    },
+    {
+      "path": "dist/evidence/catalog.json",
+      "sha256": "afc77853dd0207b73a1099e11a9b95a86674707a502319a66ace21d0f9b5fc52"
+    },
+    {
+      "path": "dist/evidence/policy.json",
+      "sha256": "228dbd09b41e17ded268cf2e2de3ce037534bbe12fce603caf9135fae928ca65"
+    },
+    {
+      "path": "dist/evidence/postgres.json",
+      "sha256": "a4a8a2fb18c93c0f86aa9e4cae51afd790f59819e2d0bf9b32553490b30ada1b"
+    },
+    {
+      "path": "dist/favicon.svg",
+      "sha256": "1d6b6e367634e3641dad6aa97769b875a4c44cff0711043edc282236384f1d3b"
+    },
+    {
+      "path": "dist/index.html",
+      "sha256": "e9cefe76c220c07146eccc679378a85572a31818fabd5decbcb5bb8671099fae"
+    },
+    {
+      "path": "dist/repositorios/index.html",
+      "sha256": "07ab62053a8cbdda738dc7e1a95a1aca754143f9a408b0ce70af3e3e67a295c0"
+    },
+    {
+      "path": "dist/resultados/index.html",
+      "sha256": "983d2e2f9eb43a7ff64d374146951ae860c86bb0e441acf5ed9cf5fdb2192b6d"
+    },
+    {
+      "path": "dist/sobre/index.html",
+      "sha256": "3aab99953139300017252f989cf410d8369aa894eabfbb2651db23caa8ed4613"
+    }
+  ],
+  "distAfter": [
+    {
+      "path": "dist/_astro/EvidenceCards.BtlGKulV.css",
+      "sha256": "18231656d12f3a5921e34da0e1d85de16e77bc6d73543f9262620fbe47bea57a"
+    },
+    {
+      "path": "dist/agentes/index.html",
+      "sha256": "e46690f2cb1a84749fa2ee7e979026f426eb471580d1b2996cc6cbddc2a1ecdf"
+    },
+    {
+      "path": "dist/arquitectura/index.html",
+      "sha256": "e0f4a24f79998711e30cd23a0d944022a25036ba94c8d8b63896760ec2249000"
+    },
+    {
+      "path": "dist/caso/index.html",
+      "sha256": "ea6d9fcd829cc8a98505f44b621823a64e8c2c4b0119cd4c0b78c2a603216247"
+    },
+    {
+      "path": "dist/decisiones/index.html",
+      "sha256": "acf77c498103b4aa974f65221df16f349197ba71d6206e83b67ac81a56c1a3b6"
+    },
+    {
+      "path": "dist/demos/index.html",
+      "sha256": "7fc9896f9c7b168564b0f8ba6bd03cde8fcae1d4be8890959e7416810e1e92ad"
+    },
+    {
+      "path": "dist/evidence/catalog.json",
+      "sha256": "afc77853dd0207b73a1099e11a9b95a86674707a502319a66ace21d0f9b5fc52"
+    },
+    {
+      "path": "dist/evidence/policy.json",
+      "sha256": "228dbd09b41e17ded268cf2e2de3ce037534bbe12fce603caf9135fae928ca65"
+    },
+    {
+      "path": "dist/evidence/postgres.json",
+      "sha256": "a4a8a2fb18c93c0f86aa9e4cae51afd790f59819e2d0bf9b32553490b30ada1b"
+    },
+    {
+      "path": "dist/favicon.svg",
+      "sha256": "1d6b6e367634e3641dad6aa97769b875a4c44cff0711043edc282236384f1d3b"
+    },
+    {
+      "path": "dist/index.html",
+      "sha256": "e9cefe76c220c07146eccc679378a85572a31818fabd5decbcb5bb8671099fae"
+    },
+    {
+      "path": "dist/repositorios/index.html",
+      "sha256": "07ab62053a8cbdda738dc7e1a95a1aca754143f9a408b0ce70af3e3e67a295c0"
+    },
+    {
+      "path": "dist/resultados/index.html",
+      "sha256": "983d2e2f9eb43a7ff64d374146951ae860c86bb0e441acf5ed9cf5fdb2192b6d"
+    },
+    {
+      "path": "dist/sobre/index.html",
+      "sha256": "3aab99953139300017252f989cf410d8369aa894eabfbb2651db23caa8ed4613"
+    }
+  ],
+  "sourceAfter": [
+    {
+      "path": ".gitattributes",
+      "sha256": "5a317c601a1406cf661ce103face7baed2b793e2469cf29f3b7e8dd46eecbc3d"
+    },
+    {
+      "path": ".github/workflows/pages.yml",
+      "sha256": "afd8bec19b07452c4b3144266c0cb9e939d663c4954a51d22ff0bb24675beb0e"
+    },
+    {
+      "path": ".gitignore",
+      "sha256": "fecc582fd2d9fbc741955881c957f31e4c9a94a97d0c999be32fdb1d3d73d289"
+    },
+    {
+      "path": "astro.config.mjs",
+      "sha256": "98e7ce8d00b470a798ea4d2c4acb83d718745a4ef85c92635829177860d38353"
+    },
+    {
+      "path": "package-lock.json",
+      "sha256": "50b9f4d8f83555e4b3e71e08300ada72a96f80fb245a5916c4e806ca0815d2e9"
+    },
+    {
+      "path": "package.json",
+      "sha256": "cf16f86012cfa163effc789a67c48a31b948cfbca178b51bba33eeba94147d5d"
+    },
+    {
+      "path": "playwright.config.ts",
+      "sha256": "05eecf963a343fb642ccc7ab86d0e1f086927b7bbc52d8b566e8738597a02f1d"
+    },
+    {
+      "path": "public/evidence/catalog.json",
+      "sha256": "afc77853dd0207b73a1099e11a9b95a86674707a502319a66ace21d0f9b5fc52"
+    },
+    {
+      "path": "public/evidence/policy.json",
+      "sha256": "228dbd09b41e17ded268cf2e2de3ce037534bbe12fce603caf9135fae928ca65"
+    },
+    {
+      "path": "public/evidence/postgres.json",
+      "sha256": "a4a8a2fb18c93c0f86aa9e4cae51afd790f59819e2d0bf9b32553490b30ada1b"
+    },
+    {
+      "path": "public/favicon.svg",
+      "sha256": "1d6b6e367634e3641dad6aa97769b875a4c44cff0711043edc282236384f1d3b"
+    },
+    {
+      "path": "scripts/import-evidence.mjs",
+      "sha256": "8b83f03e15f9145d9cc4e85d87e6f77a4d0e89b20e88fd50f975b65b5e9c0e6b"
+    },
+    {
+      "path": "scripts/serve-static.mjs",
+      "sha256": "522c7ba1a8a5db3ac9f04bb83a9fce04f14c4426cf175b9876a070da52c5dd73"
+    },
+    {
+      "path": "scripts/validate-content.mjs",
+      "sha256": "ee2f77686291a0fe35b50a126be9b009216877ec7ce573c154c4ec0bf202f693"
+    },
+    {
+      "path": "scripts/verify-local.mjs",
+      "sha256": "d80d6b44476fb3e9891ac972e1847fda356d4986836affe06810e42280ccf3b1"
+    },
+    {
+      "path": "src/components/Architecture.astro",
+      "sha256": "20475a6d1c83025827e355d774f711b8f0cb8dc590981d1641264df2b5f89222"
+    },
+    {
+      "path": "src/components/EvidenceCards.astro",
+      "sha256": "92c9e536d1a00bf3a5c0672ea209bd9d926f71b8a39bd1b80b284bfd099d1bee"
+    },
+    {
+      "path": "src/data/evidence-lock.json",
+      "sha256": "557ee9f59c46f72ccd9cbf0ad98d36544e814fbfdcb3a82caa77190a58100b2b"
+    },
+    {
+      "path": "src/data/site.ts",
+      "sha256": "c6b83b3dbba6ba575d7ba904c60b726f6c84d0de9a8c37bf0ef27897b37717db"
+    },
+    {
+      "path": "src/layouts/Layout.astro",
+      "sha256": "71a9761e6c4f9621e4d65a3c8103d437577f6c8bc4f64a18b93fc6a62a3f4ec4"
+    },
+    {
+      "path": "src/pages/[page].astro",
+      "sha256": "5e8bee19dc651c7f078c41d2be5858e930cee18c05c79927b21da35a9f905a31"
+    },
+    {
+      "path": "src/pages/index.astro",
+      "sha256": "4db02013a9a5d04a0cb492de68c29eac505afbe88182c3b9e30fa330f6c716ad"
+    },
+    {
+      "path": "src/styles/global.css",
+      "sha256": "9307bdb29888b0983d6ca8a47c8f26b402309d9904cafe48cd4926d479d0692c"
+    },
+    {
+      "path": "tests/browser/site.spec.ts",
+      "sha256": "f56660a7f46d10b16f5890e127aa95041858007d1363284bcd19a71b7c894565"
+    },
+    {
+      "path": "tests/content.test.mjs",
+      "sha256": "00e1be913d72ca0d8379da9165b9a04786b40459a21097181815fa17a138a843"
+    },
+    {
+      "path": "tsconfig.json",
+      "sha256": "b323e0539ced004a6d310d9a49f4e7675853b5dea22715d6ec686321e37dfc4a"
+    }
+  ],
+  "browserStats": {
+    "startTime": "2026-09-17T13:47:04.637Z",
+    "duration": 21145.698,
+    "expected": 23,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "status": "passed",
+  "ownedSourceAndBuildUnchanged": true,
+  "finishedAt": "2026-09-17T13:47:25.810Z",
+  "artifacts": [
+    {
+      "path": "astro-check.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "astro-check.stdout.txt",
+      "sha256": "6a231aabe81b8d955839d87e82783038d59273e6a69b5503ca952f0b3f8ae70e"
+    },
+    {
+      "path": "browser.stderr.txt",
+      "sha256": "51f15faac73199695cf3175f7b756f6cf720375ff28699fd160b25e668572985"
+    },
+    {
+      "path": "browser.stdout.txt",
+      "sha256": "b9d9fd803c06f43184ff7abf6ca73a35636dbab442803255a6b44769d56a75ab"
+    },
+    {
+      "path": "build.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "build.stdout.txt",
+      "sha256": "90c1d9f4fa722e7318392a663defe3752ed028ffd4f5896e344ab3b686931c07"
+    },
+    {
+      "path": "content-tests.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "content-tests.stdout.txt",
+      "sha256": "138e70ad0be392a6cb147005dcfab8ad440affcd1b489b6bc6667fbab77637fa"
+    },
+    {
+      "path": "content-validation.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "content-validation.stdout.txt",
+      "sha256": "cb51b76a4825e060b09c654812069476177969c7958efa051aa450a1baca1ecd"
+    },
+    {
+      "path": "results.json",
+      "sha256": "a1ba5e3ce86e1c86d8462d31a336a960f337b96f892f2a17062d8c1a9c62e4e2"
+    },
+    {
+      "path": "screenshots/arquitectura-desktop.png",
+      "sha256": "b578d2d48a15320475749ff34bf7de7b7317ba04a14236c8fc56e802c59d9784"
+    },
+    {
+      "path": "screenshots/arquitectura-mobile.png",
+      "sha256": "8a50810d910a29d9eecb021d70130022bbfeeab4915a6124168a365d943d697f"
+    },
+    {
+      "path": "screenshots/inicio-desktop.png",
+      "sha256": "ce436dc0220cbda1ac115c479690fa85e0e0b0d08dd24fbb1f4c8ddd98ef2d95"
+    },
+    {
+      "path": "screenshots/inicio-mobile.png",
+      "sha256": "679e08af8b102d65797c30970c9765d2819f6b4db66f1dd3ec1e3d0dff14c96c"
+    },
+    {
+      "path": "screenshots/resultados-desktop.png",
+      "sha256": "b70b75e57a83fcb3c013a8319c58be0eb2e43918a561132c2ca1234ed6b90fd8"
+    },
+    {
+      "path": "screenshots/resultados-mobile.png",
+      "sha256": "c2527f293430bb8a3fca9c2fe10bd2e3ab78dd67c9557d7e46ce40f0de09dc7d"
+    }
+  ]
+}

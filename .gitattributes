@@ -1,0 +1,5 @@
+# Preserve exact source/evidence bytes across checkout for verification hashes.
+* -text
+*.md whitespace=cr-at-eol
+*.txt whitespace=cr-at-eol
+*.json whitespace=cr-at-eol
