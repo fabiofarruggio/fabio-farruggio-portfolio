@@ -4,6 +4,9 @@ import { href, navigation, social } from '../data/site';
 interface Props { title: string; description: string; active?: string }
 const { title, description, active = '' } = Astro.props;
 const canonical = `https://fabiofarruggio.github.io${Astro.url.pathname}`;
+const mainNavigation = navigation.slice(0, 4);
+const secondaryNavigation = navigation.slice(4);
+const navHref = (slug: string) => href(`${slug}/`);
 ---
 <!doctype html>
 <html lang="es">
@@ -27,16 +30,18 @@ const canonical = `https://fabiofarruggio.github.io${Astro.url.pathname}`;
     <header class="site-header shell">
       <a class="brand" href={href()} aria-label="Fabio Farruggio — Inicio"><span class="monogram" aria-hidden="true">ff</span><span>Fabio Farruggio<small>QA Automation · Quality Engineering</small></span></a>
       <nav class="primary-nav" aria-label="Navegación principal">
-        {navigation.slice(0, 3).map(([slug, label]) => <a href={slug === 'proyectos' ? href('proyectos/') : slug === 'qa-agent' ? href('qa-agent/') : href('trayectoria/')} aria-current={active === slug ? 'page' : undefined}>{label}</a>)}
-        <details class="menu"><summary>Más <span aria-hidden="true">+</span></summary><div class="menu-panel">{navigation.slice(3).map(([slug, label]) => <a href={slug === 'repositorios' ? href('repositorios/') : href('sobre/')} aria-current={active === slug ? 'page' : undefined}>{label}</a>)}<a href={social.github} target="_blank" rel="noreferrer">GitHub <span aria-hidden="true">↗</span></a><a href={social.linkedin} target="_blank" rel="noreferrer">LinkedIn <span aria-hidden="true">↗</span></a></div></details>
+        {mainNavigation.map(([slug, label]) => <a href={navHref(slug)} aria-current={active === slug ? 'page' : undefined}>{label}</a>)}
+        <details class="menu"><summary>Más <span aria-hidden="true">+</span></summary><div class="menu-panel">
+          {secondaryNavigation.map(([slug, label]) => <a href={navHref(slug)} aria-current={active === slug ? 'page' : undefined}>{label}</a>)}
+          <a href={social.github} target="_blank" rel="noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+        </div></details>
       </nav>
     </header>
-    <div class="mode-bar"><div class="shell mode-content"><span><span class="status-dot" aria-hidden="true"></span> Portfolio personal · proyectos públicos · squads simulados</span><span><strong>QA ENGINEERING</strong> <span class="mode-note">/ evidencia offline_replay</span></span></div></div>
     <main id="contenido" tabindex="-1"><slot /></main>
     <footer class="site-footer shell">
-      <div><a class="footer-brand" href={href()}>Fabio Farruggio<span aria-hidden="true">.</span></a><p>QA Automation · Quality Engineering<br />Proyectos claros. Evidencia trazable.</p></div>
-      <nav aria-label="Mapa del sitio">{navigation.map(([slug, label]) => <a href={slug === 'proyectos' ? href('proyectos/') : slug === 'qa-agent' ? href('qa-agent/') : slug === 'trayectoria' ? href('trayectoria/') : slug === 'repositorios' ? href('repositorios/') : href('sobre/')}>{label}</a>)}</nav>
-      <p class="footer-note">Este portfolio presenta a Fabio, su carrera y sus proyectos. QA Agent Platform es el proyecto destacado: una implementación original con datos sintéticos. Catálogo y Pedidos son squads simulados; la evidencia del laboratorio distingue lo verificado localmente de lo que sigue pendiente.</p>
+      <div><a class="footer-brand" href={href()}>Fabio Farruggio<span aria-hidden="true">.</span></a><p>QA Automation · Quality Engineering<br />Frameworks que los equipos pueden sostener.</p></div>
+      <nav aria-label="Mapa del sitio">{navigation.map(([slug, label]) => <a href={navHref(slug)}>{label}</a>)}<a href={social.github} target="_blank" rel="noreferrer">GitHub</a></nav>
+      <p class="footer-note">Self-Service Agentic Quality Platform es el proyecto principal: un laboratorio original con datos sintéticos, siete repositorios, diez roles definidos y dos squads simulados. El portfolio distingue la evidencia local de las capacidades todavía pendientes.</p>
     </footer>
   </body>
 </html>

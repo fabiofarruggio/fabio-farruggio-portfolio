@@ -18,8 +18,6 @@ for (const viewport of [{ name: 'desktop', width: 1440, height: 1000 }, { name: 
     expect(response?.status()).toBe(200);
     await expect(page.locator('html')).toHaveAttribute('lang','es');
     await expect(page.locator('main h1')).toHaveCount(1);
-    await expect(page.locator('.mode-bar')).toContainText('offline_replay');
-    await expect(page.locator('.mode-bar')).toContainText('squads simulados');
     await expect(page.locator('script')).toHaveCount(0);
     expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
     const result = await new AxeBuilder({ page }).withTags(['wcag2a','wcag2aa','wcag21aa']).analyze();
@@ -62,7 +60,17 @@ test('seven repositories and ten roles remain explicit with approved public link
   await page.goto('repositorios/'); await expect(page.locator('.repo-grid article')).toHaveCount(7);
   await expect(page.locator('a[href^="https://github.com/fabiofarruggio/"]')).toHaveCount(7);
   await page.goto('agentes/'); await expect(page.locator('.role-list article')).toHaveCount(10);
-  await page.goto('sobre/'); await expect(page.locator('main')).toContainText('demo individual');
+  await page.goto('sobre/'); await expect(page.locator('main')).toContainText('No hay una consola');
+});
+test('home presents two projects and a clear platform explanation', async ({ page }) => {
+  await page.goto('./');
+  await expect(page.locator('.project-card')).toHaveCount(2);
+  await expect(page.locator('main')).toContainText('La calidad se puede compartir');
+  await expect(page.locator('main')).toContainText('Self-Service Agentic Quality Platform');
+  await expect(page.locator('main')).toContainText('QA Framework Template');
+  await expect(page.locator('main')).toContainText('Qué hace la plataforma y cómo se conectan sus piezas');
+  await expect(page.locator('main')).not.toContainText('Señales claras, sin ruido');
+  await expect(page.locator('main')).not.toContainText('La parte que se puede comprobar');
 });
 test('all pages fit a narrow320px viewport', async ({ page }) => {
   await page.setViewportSize({ width:320,height:740 });
@@ -73,7 +81,7 @@ test('content and native navigation work with JavaScript disabled', async ({ bro
   await context.route('**/*', route => new URL(route.request().url()).origin === origin ? route.continue() : route.abort());
   try {
     const page = await context.newPage(); await page.goto(`${origin}${base}`);
-    await expect(page.getByRole('heading', { level:1 })).toContainText('Fabio');
+    await expect(page.getByRole('heading', { level:1 })).toContainText('Calidad');
     await page.locator('summary').click(); await page.locator('.menu-panel').getByRole('link', { name:'Repositorios' }).click();
     await expect(page.locator('main h1')).toContainText('Siete repositorios');
   } finally { await context.close(); }

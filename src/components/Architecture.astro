@@ -1,11 +1,11 @@
 <figure class="architecture">
-  <div class="diagram-label"><span>FRONTERAS DE CONFIANZA</span><span>DISEÑO · NO EN VIVO</span></div>
-  <div class="flow-input"><span class="node-symbol" aria-hidden="true">↳</span><div><strong>Historia + contexto</strong><span>Entrada no confiable</span></div></div>
-  <div class="flow-arrow" aria-hidden="true">↓</div>
-  <div class="control-node"><div><span class="node-index">01</span><strong>Control y contratos</strong></div><p>Identidad · políticas · estado durable</p><span class="node-tag">DENEGAR POR DEFECTO</span></div>
-  <div class="flow-arrow" aria-hidden="true">↓</div>
-  <div class="diagram-pair"><div><span class="node-index">02</span><strong>Agentes</strong><p>Proponen.<br />No se autoautorizan.</p></div><div><span class="node-index">03</span><strong>Runner</strong><p>Ejecuta pruebas.<br />Sin secretos de publicación.</p></div></div>
-  <div class="flow-arrow" aria-hidden="true">↓</div>
-  <div class="flow-output"><span class="node-symbol" aria-hidden="true">✓</span><div><strong>Evidencia + revisión</strong><span>Versión exacta antes de publicar</span></div><span class="human-tag">CONTROL HUMANO</span></div>
-  <figcaption>Diagrama conceptual. Publicador separado; inferencia y flujos conectados pendientes de verificación.</figcaption>
+  <div class="architecture-heading"><div><p class="eyebrow">Flujo de trabajo</p><h2>De una historia a una revisión.</h2></div><span>Diseño documentado · no es una ejecución live</span></div>
+  <ol class="architecture-flow">
+    <li><span>01</span><div><strong>Historia y contexto</strong><p>Entrada acotada, criterios y datos permitidos.</p></div></li>
+    <li><span>02</span><div><strong>Contratos y políticas</strong><p>Identidad, permisos, estado y límites antes del efecto.</p></div></li>
+    <li><span>03</span><div><strong>Roles y framework</strong><p>Propuesta de estrategia, suite y patch con procedencia.</p></div></li>
+    <li><span>04</span><div><strong>Runner y laboratorio</strong><p>Pruebas sobre una versión y un entorno identificados.</p></div></li>
+    <li><span>05</span><div><strong>Evidencia y revisión humana</strong><p>Resultado, limitaciones y decisión pendiente antes de publicar.</p></div></li>
+  </ol>
+  <figcaption>Los agentes pueden proponer y explicar; las políticas y la aprobación humana conservan la autoridad.</figcaption>
 </figure>
