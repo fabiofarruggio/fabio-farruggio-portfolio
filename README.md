@@ -1,5 +1,7 @@
 # Fabio Farruggio — portfolio local verificable
 
+**Idioma / Language:** Español (principal) · [English](README.en.md)
+
 Sitio Astro estático con nueve páginas, contenido profesional en español y extractos sanitizados del laboratorio. **Preparación local de TASK-063–066 / REQ-PORT-001–004; la publicación fue autorizada por el propietario, pero todavía no se ejecutó ni constituye aceptación de M6.**
 
 ## Ejecutar y verificar
@@ -57,3 +59,7 @@ Antes de habilitarlo: revisar cuenta, repositorio, visibilidad, licencia MIT, co
 La QA combina Chrome desktop/móvil, teclado, links internos, ausencia de requests externos y reglas axe WCAG A/AA seleccionadas. No certifica accesibilidad completa, compatibilidad con todos los navegadores ni seguridad absoluta. El CSP bloquea scripts, conexiones y formularios del sitio; no reemplaza la revisión del contenido.
 
 Rollback de esta unidad: retirar `src`, `public`, `scripts`, `tests`, configuración Astro/Playwright/TypeScript, package/lock, el workflow manual y esta documentación; conservar `AGENTS.md`, evidencia histórica y la inicialización original del repositorio. Los demás seis repositorios no fueron modificados. No se ejecutó despliegue remoto, gasto ni provisión de credenciales. Review mode: `disabled/unmanaged`.
+
+## Política de documentación
+
+Este `README.md` es la entrada principal en español. La versión completa en inglés está en [`README.en.md`](README.en.md). `AGENTS.md` y las notas históricas de `evidence/` conservan su idioma y bytes originales para proteger instrucciones y procedencia; los documentos de terceros/vendor no se traducen.
