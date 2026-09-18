@@ -1,6 +1,6 @@
 # Fabio Farruggio — portfolio local verificable
 
-Sitio Astro estático con nueve páginas, contenido profesional en español y extractos sanitizados del laboratorio. **Preparación local de TASK-063–066 / REQ-PORT-001–004; no es aceptación de M6 ni publicación autorizada.**
+Sitio Astro estático con nueve páginas, contenido profesional en español y extractos sanitizados del laboratorio. **Preparación local de TASK-063–066 / REQ-PORT-001–004; la publicación fue autorizada por el propietario, pero todavía no se ejecutó ni constituye aceptación de M6.**
 
 ## Ejecutar y verificar
 
@@ -42,7 +42,7 @@ Catálogo y Pedidos son **squads simulados**. Los siete repositorios y diez role
 
 Astro **7.3.3**, `@astrojs/check` **0.9.10**, TypeScript **6.0.3**, Playwright **1.63.0**, axe-core Playwright **4.13.0** y tipos Node **24.13.5** están fijados en el lockfile. Node24 satisface los requisitos oficiales. [Instalación oficial de Astro](https://docs.astro.build/en/install-and-setup/).
 
-El inventario de licencias de paquetes bloqueados está en `evidence/local/dependency-license-inventory.json`. Incluye dependencias opcionales de otras plataformas; no afirma que todas estén instaladas. No se concedió una licencia pública al contenido propio: esa decisión sigue pendiente del propietario.
+El inventario de licencias de paquetes bloqueados está en `evidence/local/dependency-license-inventory.json`. Incluye dependencias opcionales de otras plataformas; no afirma que todas estén instaladas. El **código original** de este repositorio y de los otros seis repositorios del alcance se distribuye bajo [MIT](LICENSE); las dependencias conservan sus licencias propias. El texto editorial, diagramas y assets del portfolio no se relicencian implícitamente como código.
 
 ## GitHub Pages: preparado, no ejecutado
 
@@ -50,7 +50,7 @@ La configuración conserva el base path de proyecto `/fabio-farruggio-portfolio/
 
 El workflow sólo admite `workflow_dispatch`; no tiene triggers de push ni schedule. Los cuatro actions oficiales están fijados a SHAs verificados mediante `git ls-remote`. Por defecto no se ejecuta ningún job: exige `PORTFOLIO_PUBLICATION_APPROVED=true` y un `PORTFOLIO_SITE` HTTPS explícito de GitHub Pages. Ese flag y una referencia escrita **no autentican por sí mismos una aprobación humana**.
 
-Antes de habilitarlo: aprobar cuenta, repositorio, visibilidad, licencia, costos/cuotas y contenido; configurar Pages y protección de ambiente con revisión humana; verificar scopes; revisar la referencia aprobada y el SHA a publicar. Después: ejecutar manualmente, comprobar lectura pública, base path y links reales. Nada de esto se ha realizado aquí; los enlaces públicos aún no pueden aceptarse.
+Antes de habilitarlo: revisar cuenta, repositorio, visibilidad, licencia MIT, costos/cuotas y contenido; configurar Pages y protección de ambiente con revisión humana; verificar scopes; revisar la referencia aprobada y el SHA a publicar. Después: ejecutar manualmente, comprobar lectura pública, base path y links reales. Nada de esto se ha realizado aquí; los enlaces públicos aún no pueden aceptarse.
 
 ## Límites y rollback
 
