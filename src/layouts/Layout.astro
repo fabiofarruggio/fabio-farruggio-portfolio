@@ -9,7 +9,7 @@ const secondaryNavigation = navigation.slice(4);
 const navHref = (slug: string) => href(`${slug}/`);
 ---
 <!doctype html>
-<html lang="es">
+<html lang="es" data-theme="dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -19,10 +19,11 @@ const navHref = (slug: string) => href(`${slug}/`);
     <meta property="og:title" content={`${title} · Fabio Farruggio`} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonical} />
-    <meta name="color-scheme" content="light" />
+    <meta name="color-scheme" content="dark light" />
     <meta name="robots" content="index, follow" />
-    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; img-src 'self'; font-src 'self'; script-src 'none'; connect-src 'none'; base-uri 'none'; form-action 'none'" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; img-src 'self'; font-src 'self'; script-src 'self'; connect-src 'none'; base-uri 'none'; form-action 'none'" />
     <link rel="icon" type="image/svg+xml" href={href('favicon.svg')} />
+    <script src={href('theme.js')} is:inline></script>
     <title>{title} · Fabio Farruggio</title>
   </head>
   <body>
@@ -35,6 +36,10 @@ const navHref = (slug: string) => href(`${slug}/`);
           {secondaryNavigation.map(([slug, label]) => <a href={navHref(slug)} aria-current={active === slug ? 'page' : undefined}>{label}</a>)}
           <a href={social.github} target="_blank" rel="noreferrer">GitHub <span aria-hidden="true">↗</span></a>
         </div></details>
+        <button class="theme-toggle" type="button" role="switch" aria-checked="true" aria-label="Cambiar a modo claro" data-theme-toggle>
+          <span class="theme-toggle-track" aria-hidden="true"><span class="theme-toggle-thumb"></span></span>
+          <span data-theme-label>Oscuro</span>
+        </button>
       </nav>
     </header>
     <main id="contenido" tabindex="-1"><slot /></main>

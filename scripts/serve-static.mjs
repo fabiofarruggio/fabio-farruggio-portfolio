@@ -4,7 +4,7 @@ import { resolve, extname, sep } from 'node:path';
 import { fileURLToPath } from 'node:url';
 const root = fileURLToPath(new URL('../dist/',import.meta.url));
 const base = '/fabio-farruggio-portfolio/';
-const types = { '.html':'text/html; charset=utf-8','.css':'text/css; charset=utf-8','.json':'application/json; charset=utf-8','.svg':'image/svg+xml' };
+const types = { '.html':'text/html; charset=utf-8','.css':'text/css; charset=utf-8','.js':'text/javascript; charset=utf-8','.json':'application/json; charset=utf-8','.svg':'image/svg+xml' };
 const server=createServer(async(request,response)=>{
   try {
     if(request.method!=='GET'&&request.method!=='HEAD') { response.writeHead(405);response.end();return; }

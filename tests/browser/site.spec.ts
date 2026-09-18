@@ -18,7 +18,7 @@ for (const viewport of [{ name: 'desktop', width: 1440, height: 1000 }, { name: 
     expect(response?.status()).toBe(200);
     await expect(page.locator('html')).toHaveAttribute('lang','es');
     await expect(page.locator('main h1')).toHaveCount(1);
-    await expect(page.locator('script')).toHaveCount(0);
+    await expect(page.locator('script[src$="theme.js"]')).toHaveCount(1);
     expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
     const result = await new AxeBuilder({ page }).withTags(['wcag2a','wcag2aa','wcag21aa']).analyze();
     expect(result.violations).toEqual([]);
@@ -71,6 +71,22 @@ test('home presents two projects and a clear platform explanation', async ({ pag
   await expect(page.locator('main')).toContainText('Qué hace la plataforma y cómo se conectan sus piezas');
   await expect(page.locator('main')).not.toContainText('Señales claras, sin ruido');
   await expect(page.locator('main')).not.toContainText('La parte que se puede comprobar');
+});
+test('theme switch defaults to dark and persists the selected mode', async ({ page }) => {
+  await page.goto('./');
+  const root = page.locator('html');
+  const toggle = page.getByRole('switch', { name: 'Cambiar a modo claro' });
+  await expect(root).toHaveAttribute('data-theme', 'dark');
+  await expect(toggle).toHaveAttribute('aria-checked', 'true');
+  await toggle.click();
+  await expect(root).toHaveAttribute('data-theme', 'light');
+  await expect(page.getByRole('switch', { name: 'Cambiar a modo oscuro' })).toHaveAttribute('aria-checked', 'false');
+  const lightModeResult = await new AxeBuilder({ page }).withTags(['wcag2a','wcag2aa','wcag21aa']).analyze();
+  expect(lightModeResult.violations).toEqual([]);
+  await page.reload();
+  await expect(root).toHaveAttribute('data-theme', 'light');
+  await page.getByRole('switch', { name: 'Cambiar a modo oscuro' }).click();
+  await expect(root).toHaveAttribute('data-theme', 'dark');
 });
 test('all pages fit a narrow320px viewport', async ({ page }) => {
   await page.setViewportSize({ width:320,height:740 });
