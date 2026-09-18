@@ -14,6 +14,22 @@ export const navigation = [
   ['sobre', 'Sobre mí'],
 ] as const;
 
+export const profileBadges = [
+  'QA Automation',
+  'Quality Engineering',
+  'Test Strategy',
+  'Developer Tooling',
+  'Playwright',
+  'TypeScript',
+] as const;
+
+export const profileSignals = [
+  { value: '7', label: 'repositorios públicos', note: 'un sistema trazable' },
+  { value: '10', label: 'roles de agente', note: 'responsabilidades acotadas' },
+  { value: '2', label: 'squads simulados', note: 'Catálogo y Pedidos' },
+  { value: '$0', label: 'presupuesto de inferencia', note: 'sin pagos autorizados' },
+] as const;
+
 export const featuredProjects = [
   {
     slug: 'qa-agent',
@@ -108,7 +124,7 @@ export const pages: Page[] = [
   { slug: 'proyectos', eyebrow: 'Proyectos / 01', title: 'Trabajo que convierte calidad en decisiones.', intro: 'Una selección de proyectos para entender qué construyo, qué problema resuelve cada pieza y qué aprendí al llevarla a código.', sections: [
     { title: 'Mi forma de trabajar', text: 'Empiezo por el riesgo y la intención, no por la herramienta. Después diseño una frontera pequeña, la pruebo con datos reales o sintéticos y dejo visible qué queda fuera.' },
     { title: 'El proyecto principal', text: 'QA Agent Platform es el proyecto que reúne esa forma de pensar: contratos, políticas, automatización, evidencia y control humano en un sistema de siete repositorios.' },
-    { title: 'Más allá del proyecto principal', text: 'Los proyectos de e-commerce, herramientas de automatización y pilotos de producto muestran el mismo hilo: hacer que un sistema sea útil, mantenible y fácil de revisar.' },
+    { title: 'Más allá del proyecto principal', text: 'Los repositorios públicos QA Framework Template, Quality Lab App, QA Agent Evals y Find Work Agent muestran el mismo hilo: hacer que un sistema sea útil, mantenible y fácil de revisar.' },
   ] },
   { slug: 'qa-agent', eyebrow: 'Proyecto destacado / 02', title: 'QA Agent Platform.', intro: 'Un sistema de Quality Engineering para que la automatización ayude a decidir mejor, no para reemplazar el criterio de las personas.', sections: [
     { title: 'El problema', text: 'Un agente puede proponer un test, pero una propuesta no es una aprobación. Si el sistema no conserva intención, versión, permisos y evidencia, el resultado pierde valor.' },
