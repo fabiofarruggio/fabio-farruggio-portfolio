@@ -1,7 +1,0 @@
-18:18:53 [types] Generated 78ms
-18:18:53 [check] Getting diagnostics for Astro files in F:\Programacion\qa-agent-platform\fabio-farruggio-portfolio...
-Result (15 files): 
-- 0 errors
-- 0 warnings
-- 0 hints
-

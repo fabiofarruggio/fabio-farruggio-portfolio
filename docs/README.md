@@ -8,7 +8,7 @@
 - [README completo en inglés](../README.en.md)
 - [Política de documentación](DOCUMENTATION-POLICY.md)
 - [Documentation policy — English](DOCUMENTATION-POLICY.en.md)
-- [Evidencia local](../evidence/local/)
+- Los recibos de verificación locales se conservan en el respaldo privado del workspace y no se publican.
 - [Licencia MIT](../LICENSE)
 
-La evidencia local, `AGENTS.md`, fuentes editoriales y assets conservan su idioma y bytes cuando forman parte de la procedencia o de instrucciones operativas.
+Los recibos de verificación, `AGENTS.md`, fuentes editoriales y assets conservan su idioma y bytes cuando forman parte de la procedencia o de instrucciones operativas. Los tres registros seleccionados para el sitio viven en `public/evidence/` y contienen únicamente campos sanitizados.

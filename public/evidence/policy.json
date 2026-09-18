@@ -5,7 +5,7 @@
   "source": {
     "repository": "qa-agent-platform",
     "archiveCommit": "b514e82d7c3c3cbfd613334691de069099b035ce",
-    "path": "docs/implementation/evidence/security-policy/results.json",
+    "path": "private/evidence/security-policy.json",
     "sha256": "9e731e971888738e848391057e0782cbe834954ab33ac95f910684eca0dc3fc1"
   },
   "recordedAt": "2026-09-17T13:00:44.6815439Z",

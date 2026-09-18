@@ -13,3 +13,5 @@ test-results/
 .venv/
 .astro/
 .npm-cache/
+# Browser/build receipts contain local paths and remain outside the public site.
+/evidence/local/

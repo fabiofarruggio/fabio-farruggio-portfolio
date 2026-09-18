@@ -5,7 +5,7 @@
   "source": {
     "repository": "quality-lab-catalog-tests",
     "archiveCommit": "14e9bddf63bccab45bc29b6003e6a380279a28b8",
-    "path": "evidence/2026-09-17T12-51-57.287Z/acceptance.json",
+    "path": "private/evidence/catalog-acceptance.json",
     "sha256": "fc5e57bc5d1e8c0b2d46db08761709e509df1b937efb81610b5e10e783eb1e48"
   },
   "recordedAt": "2026-09-17T12:58:36.707Z",

@@ -1,6 +1,0 @@
-{
-  "ProcessId": 188584,
-  "ParentProcessId": 11480,
-  "ExecutablePath": "F:\\Programacion\\qa-agent-platform\\.tools\\node-v24.21.0-win-x64\\node.exe",
-  "CommandLine": "F:\\Programacion\\qa-agent-platform\\.tools\\node-v24.21.0-win-x64\\node.exe F:\\Programacion\\qa-agent-platform\\fabio-farruggio-portfolio\\node_modules\\astro\\bin\\astro.mjs preview --port 4321 --host 127.0.0.1 --json"
-}
