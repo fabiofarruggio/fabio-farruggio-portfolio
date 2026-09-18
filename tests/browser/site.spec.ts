@@ -2,7 +2,7 @@ import { test, expect } from '@playwright/test';
 import AxeBuilder from '@axe-core/playwright';
 import { mkdirSync } from 'node:fs';
 import { resolve } from 'node:path';
-const pages = ['', 'caso/', 'arquitectura/', 'agentes/', 'demos/', 'resultados/', 'decisiones/', 'repositorios/', 'sobre/'];
+const pages = ['', 'proyectos/', 'qa-agent/', 'trayectoria/', 'arquitectura/', 'agentes/', 'demos/', 'resultados/', 'decisiones/', 'repositorios/', 'sobre/'];
 const origin = 'http://127.0.0.1:4321';
 const base = '/fabio-farruggio-portfolio/';
 test.beforeEach(async ({ page }) => {
@@ -38,7 +38,7 @@ test('keyboard skip link and native navigation disclosure work without JavaScrip
   await page.locator('summary').focus(); await page.keyboard.press('Enter');
   await expect(page.locator('details')).toHaveAttribute('open','');
   await page.keyboard.press('Tab'); await expect(page.locator('.menu-panel a').first()).toBeFocused();
-  await page.keyboard.press('Enter'); await expect(page).toHaveURL(`${origin}${base}caso/`);
+  await page.keyboard.press('Enter'); await expect(page).toHaveURL(`${origin}${base}repositorios/`);
 });
 test('every rendered link stays in the project base and resolves, including evidence', async ({ page, request }) => {
   const links = new Set<string>();
@@ -47,7 +47,9 @@ test('every rendered link stays in the project base and resolves, including evid
     for (const link of await page.locator('a[href]').evaluateAll(nodes => nodes.map(node => (node as HTMLAnchorElement).href))) links.add(link);
   }
   for (const link of links) {
-    const url = new URL(link); expect(url.origin).toBe(origin); expect(url.pathname.startsWith(base)).toBe(true);
+    const url = new URL(link);
+    if (url.origin !== origin) { expect(['github.com','ar.linkedin.com']).toContain(url.hostname); continue; }
+    expect(url.pathname.startsWith(base)).toBe(true);
     const response = await request.get(link); expect(response.status(), link).toBe(200);
     if (url.hash) { await page.goto(link); await expect(page.locator(url.hash)).toHaveCount(1); }
   }
@@ -56,9 +58,9 @@ test('every rendered link stays in the project base and resolves, including evid
     expect(data.mode).toBe('offline_replay'); expect(data.source.archiveCommit).toMatch(/^[a-f0-9]{40}$/);
   }
 });
-test('seven repositories and ten roles remain explicit, without invented remote links', async ({ page }) => {
+test('seven repositories and ten roles remain explicit with approved public links', async ({ page }) => {
   await page.goto('repositorios/'); await expect(page.locator('.repo-grid article')).toHaveCount(7);
-  await expect(page.locator('a[href^="https://"]')).toHaveCount(0);
+  await expect(page.locator('a[href^="https://github.com/fabiofarruggio/"]')).toHaveCount(7);
   await page.goto('agentes/'); await expect(page.locator('.role-list article')).toHaveCount(10);
   await page.goto('sobre/'); await expect(page.locator('main')).toContainText('demo individual');
 });
@@ -71,8 +73,8 @@ test('content and native navigation work with JavaScript disabled', async ({ bro
   await context.route('**/*', route => new URL(route.request().url()).origin === origin ? route.continue() : route.abort());
   try {
     const page = await context.newPage(); await page.goto(`${origin}${base}`);
-    await expect(page.getByRole('heading', { level:1 })).toContainText('Se demuestra.');
-    await page.locator('summary').click(); await page.locator('.menu-panel').getByRole('link', { name:'Resultados' }).click();
-    await expect(page.locator('.evidence-card')).toHaveCount(3);
+    await expect(page.getByRole('heading', { level:1 })).toContainText('Fabio');
+    await page.locator('summary').click(); await page.locator('.menu-panel').getByRole('link', { name:'Repositorios' }).click();
+    await expect(page.locator('main h1')).toContainText('Siete repositorios');
   } finally { await context.close(); }
 });

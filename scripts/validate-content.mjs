@@ -37,7 +37,7 @@ export function validateBundle() {
   }
   const content = readFileSync(resolve(root,'src/data/site.ts'),'utf8');
   for (const phrase of ['squads simulados','publicación','pendiente']) if (!content.includes(phrase)) throw new Error(`Required disclosure absent: ${phrase}`);
-  console.log(`PASS: ${names.length} allowlisted evidence excerpts; publication remains pending.`);
+  console.log(`PASS: ${names.length} allowlisted evidence excerpts; connected QA Agent capabilities remain pending.`);
 }
 export const digest = bytes => createHash('sha256').update(bytes).digest('hex');
 export function assertPinnedDigest(bytes, expected) {

@@ -14,5 +14,5 @@ const cards = [
   <p class="evidence-number">{card.number}<span>{card.unit}</span></p>
   <h3>{card.title}</h3><p>{card.text}</p>
   <dl class="evidence-meta"><dt>{card.label}</dt><dd><code>{card.revision}</code></dd><dt>Fecha del registro</dt><dd><time datetime={card.source.recordedAt}>{card.source.recordedAt.slice(0,10)}</time></dd></dl>
-  <a class="text-link" href={href(`evidence/${card.id}.json`)}>Leer extracto {card.id} <span aria-hidden="true">↗</span></a>
+  <a class="text-link" href={href(`evidence/${card.id}.json`)}>Ver registro estructurado <span aria-hidden="true">↗</span></a>
 </article>)}</div>

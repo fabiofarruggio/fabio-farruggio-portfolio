@@ -1,8 +1,9 @@
 ---
 import '../styles/global.css';
-import { href, navigation } from '../data/site';
+import { href, navigation, social } from '../data/site';
 interface Props { title: string; description: string; active?: string }
 const { title, description, active = '' } = Astro.props;
+const canonical = `https://fabiofarruggio.github.io${Astro.url.pathname}`;
 ---
 <!doctype html>
 <html lang="es">
@@ -10,8 +11,13 @@ const { title, description, active = '' } = Astro.props;
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={`${title} · Fabio Farruggio`} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
     <meta name="color-scheme" content="light" />
-    <meta name="robots" content="noindex, nofollow" />
+    <meta name="robots" content="index, follow" />
     <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; img-src 'self'; font-src 'self'; script-src 'none'; connect-src 'none'; base-uri 'none'; form-action 'none'" />
     <link rel="icon" type="image/svg+xml" href={href('favicon.svg')} />
     <title>{title} · Fabio Farruggio</title>
@@ -19,20 +25,18 @@ const { title, description, active = '' } = Astro.props;
   <body>
     <a class="skip-link" href="#contenido">Saltar al contenido</a>
     <header class="site-header shell">
-      <a class="brand" href={href()} aria-label="Fabio Farruggio — Inicio"><span class="monogram" aria-hidden="true">ff.</span><span>Fabio Farruggio<small>Quality Engineering</small></span></a>
+      <a class="brand" href={href()} aria-label="Fabio Farruggio — Inicio"><span class="monogram" aria-hidden="true">ff</span><span>Fabio Farruggio<small>QA Automation · Quality Engineering</small></span></a>
       <nav class="primary-nav" aria-label="Navegación principal">
-        <a href={href('caso/')} aria-current={active === 'caso' ? 'page' : undefined}>El caso</a>
-        <a href={href('arquitectura/')} aria-current={active === 'arquitectura' ? 'page' : undefined}>Arquitectura</a>
-        <a href={href('resultados/')} aria-current={active === 'resultados' ? 'page' : undefined}>Evidencia <span aria-hidden="true">↗</span></a>
-        <details class="menu"><summary>Explorar <span aria-hidden="true">+</span></summary><div class="menu-panel">{navigation.map(([slug, label]) => <a href={href(`${slug}/`)} aria-current={active === slug ? 'page' : undefined}>{label}</a>)}</div></details>
+        {navigation.slice(0, 3).map(([slug, label]) => <a href={slug === 'proyectos' ? href('proyectos/') : slug === 'qa-agent' ? href('qa-agent/') : href('trayectoria/')} aria-current={active === slug ? 'page' : undefined}>{label}</a>)}
+        <details class="menu"><summary>Más <span aria-hidden="true">+</span></summary><div class="menu-panel">{navigation.slice(3).map(([slug, label]) => <a href={slug === 'repositorios' ? href('repositorios/') : href('sobre/')} aria-current={active === slug ? 'page' : undefined}>{label}</a>)}<a href={social.github} target="_blank" rel="noreferrer">GitHub <span aria-hidden="true">↗</span></a><a href={social.linkedin} target="_blank" rel="noreferrer">LinkedIn <span aria-hidden="true">↗</span></a></div></details>
       </nav>
     </header>
-    <div class="mode-bar"><div class="shell mode-content"><span><span class="status-dot" aria-hidden="true"></span> Demo individual · squads simulados</span><span><strong>offline_replay</strong> <span class="mode-note">/ publicación pendiente</span></span></div></div>
+    <div class="mode-bar"><div class="shell mode-content"><span><span class="status-dot" aria-hidden="true"></span> Portfolio personal · proyectos públicos · squads simulados</span><span><strong>QA ENGINEERING</strong> <span class="mode-note">/ evidencia offline_replay</span></span></div></div>
     <main id="contenido" tabindex="-1"><slot /></main>
     <footer class="site-footer shell">
-      <div><a class="footer-brand" href={href()}>Fabio Farruggio<span aria-hidden="true">.</span></a><p>Decisiones claras. Evidencia trazable.<br />Sin promesas por encima de los resultados.</p></div>
-      <nav aria-label="Mapa del sitio">{navigation.map(([slug, label]) => <a href={href(`${slug}/`)}>{label}</a>)}</nav>
-      <p class="footer-note">Proyecto original individual. Catálogo y Pedidos son squads simulados. Sitio estático local, sin llamadas a modelos ni a servicios del laboratorio. M6 y publicación no aceptados.</p>
+      <div><a class="footer-brand" href={href()}>Fabio Farruggio<span aria-hidden="true">.</span></a><p>QA Automation · Quality Engineering<br />Proyectos claros. Evidencia trazable.</p></div>
+      <nav aria-label="Mapa del sitio">{navigation.map(([slug, label]) => <a href={slug === 'proyectos' ? href('proyectos/') : slug === 'qa-agent' ? href('qa-agent/') : slug === 'trayectoria' ? href('trayectoria/') : slug === 'repositorios' ? href('repositorios/') : href('sobre/')}>{label}</a>)}</nav>
+      <p class="footer-note">Este portfolio presenta a Fabio, su carrera y sus proyectos. QA Agent Platform es el proyecto destacado: una implementación original con datos sintéticos. Catálogo y Pedidos son squads simulados; la evidencia del laboratorio distingue lo verificado localmente de lo que sigue pendiente.</p>
     </footer>
   </body>
 </html>
