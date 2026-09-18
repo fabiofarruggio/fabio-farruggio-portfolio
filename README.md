@@ -6,7 +6,7 @@ Portfolio personal de Fabio Farruggio, orientado a **QA Automation** y **Quality
 
 ## Qué vas a encontrar
 
-- **Quién soy:** mi foco profesional en calidad de software, automatización y herramientas de ingeniería.
+- **Quién soy:** lidero equipos para adoptar buenas prácticas de automatización, desarrollar frameworks mantenibles y tomar ownership de la calidad del producto.
 - **Proyectos públicos:** QA Agent Platform, Find Work Agent y los repositorios públicos del laboratorio.
 - **Repositorios:** el mapa público de los siete repositorios que forman el laboratorio de QA Agent.
 - **Evidencia:** tres registros locales seleccionados, con revisión, modo de ejecución y limitaciones visibles.
