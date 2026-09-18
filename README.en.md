@@ -7,7 +7,7 @@ Personal portfolio for Fabio Farruggio, focused on **QA Automation** and **Quali
 ## What you will find
 
 - **About me:** my focus on software quality, automation, and engineering tools.
-- **Projects:** QA Agent Platform, Frávega E-commerce, Find Work Agent, Consorcio, Mundial 2026, and Bot Dólar Blue.
+- **Public projects:** QA Agent Platform, Find Work Agent, and the laboratory's public repositories.
 - **Repositories:** the public map of the seven repositories in the QA Agent laboratory.
 - **Evidence:** three selected local records with revision, execution mode, and limitations shown clearly.
 
